@@ -10,7 +10,7 @@ class MyTasks(TaskSet):
 	def lenght_5(self):
 		random_string = get_random_string(5)
 		json_response = dict()
-		with self.client.get('/echo/' + random_string, name = 'Echo Api Get length(5)', catch_response = True)
+		with self.client.get('/echo/' + random_string, name = 'Echo Api Get length(5)', catch_response = True) as reponse:
 			try: 
 				json_response = response.json()
 			except ValueError as e:
